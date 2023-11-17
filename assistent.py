@@ -32,7 +32,7 @@ def main():
                 model="gpt-3.5-turbo",
                 messages=messages,
             )
-            print(completion.choices[0].message)
+            print(completion.choices[0].message.content)
             # Find all matches of <bash> tags using regex and loop through them:
             for bash_command in re.findall(
                 pattern, completion.choices[0].message.content
